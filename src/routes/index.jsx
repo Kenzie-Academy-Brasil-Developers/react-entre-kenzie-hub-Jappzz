@@ -10,8 +10,10 @@ export const RoutesMain = () => {
     console.log(user)
     return (
         <Routes>
+            <Route path="/"
+                element={<LoginPage setUser={setUser} />} />
             <Route 
-                path="/"
+                path="/dashboard"
                 element={
                     <HomePage
                         user={user}
@@ -21,8 +23,6 @@ export const RoutesMain = () => {
             <Route path="/register"
                 element={<RegisterPage />} />
 
-            <Route path="/login"
-                element={<LoginPage setUser={setUser} />} />
         </Routes>
     )
 }

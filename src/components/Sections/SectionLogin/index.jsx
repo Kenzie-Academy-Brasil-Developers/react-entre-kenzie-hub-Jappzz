@@ -35,7 +35,7 @@ export const SectionLogin = ({ setUser }) => {
             })
             
             setTimeout(() => {
-                navigate("/");
+                navigate("/dashboard")
             }, 3000)
         } catch (error) {
             toast.error("Email ou senha inválidos", {

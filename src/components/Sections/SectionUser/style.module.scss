@@ -1,14 +1,14 @@
 .section__container{
     display: flex;
     flex-direction: column;
-    gap: 37px;
+    gap: 2.3125rem;
 }
 
 .div__user{
     display: flex;
     justify-content: space-between;
-    padding: 45px 22%;
-    border-bottom: 1px solid var(--grey-3);
+    padding: 2.8125rem 22%;
+    border-bottom: 0.0625rem solid var(--grey-3);
 
     & > h1{
         color: var(--grey-0);
@@ -21,7 +21,7 @@
 .div__content{
     display: flex;
     flex-direction: column;
-    gap: 23px;
+    gap: 1.4375rem;
     padding: 0 22%;
 
     & > h2, & > p{
@@ -29,14 +29,14 @@
     }
 }
 
-@media(max-width: 750px){
+@media(max-width: 46.875rem){
     .div__user{
         flex-direction: column;
-        padding: 34px 12px;
-        gap: 10px;
+        padding: 2.125rem 0.75rem;
+        gap: 0.625rem;
     }
 
     .div__content{
-        padding: 24px 12px;
+        padding: 1.5rem 0.75rem;
     }
 }

@@ -6,7 +6,7 @@ export const HeaderRegister = () => {
         <header className={styles.header}>
             <img src={LogoKenzieHub} alt="Logo KenzieHub" />
 
-            <Link to={"/login"}>
+            <Link to={"/"}>
                 <button className={"button back headline bold "}>
                     voltar
                 </button>

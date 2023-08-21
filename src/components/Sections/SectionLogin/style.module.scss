@@ -3,15 +3,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 77px;
+    padding-bottom: 4.8125rem;
 }
 .form{
     display: flex;
     flex-direction: column;
     background-color: var(--grey-3);
-    padding: 42px 22px;
-    gap: 22px;
-    border-radius: 3.2px;
+    padding: 2.625rem 1.375rem;
+    gap: 1.375rem;
+    border-radius: 0.2rem;
 
     & > h1{
         text-align: center;
@@ -22,7 +22,7 @@
 .div__input{
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 0.9375rem;
 
     & > label{
         color: var(--grey-0);
@@ -34,11 +34,11 @@
 }
 
 .div__register{
-    padding-top: 12px;
+    padding-top: 0.75rem;
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 1.375rem;
 
     &>p{
         color: var(--grey-1);
@@ -48,7 +48,7 @@
 .div__inputPassword{
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 0.9375rem;
     color: var(--grey-0);
 
     & > p{
@@ -65,7 +65,7 @@
         & > button{
             position: absolute;
             top: 2.5rem;
-            right: 22px;
+            right: 1.375rem;
             background-color: transparent;
             border: none;
             color: var(--grey-1);
@@ -73,10 +73,10 @@
     }
 }
 
-@media(max-width: 390px){
+@media(max-width: 24.375rem){
     .form{
-        padding: 33px 17px;
-        gap: 10px;
+        padding: 2.0625rem 1.0625rem;
+        gap: 0.625rem;
         width: 85%;
 
         & > button{

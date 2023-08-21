@@ -2,16 +2,16 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 58px 36% 48px 36%;
+    padding: 3.625rem 36% 3rem 36%;
     background-color: var(--grey-4);
     & > img{
-        width: 122px;
-        height: 21px;
+        width: 7.625rem;
+        height: 1.3125rem;
     }
 }
 
-@media(max-width: 800px){
+@media(max-width: 50rem){
     .header{
-        padding: 49px 20px 38px 20px;
+        padding: 3.0625rem 1.25rem 2.375rem 1.25rem;
     }
 }
