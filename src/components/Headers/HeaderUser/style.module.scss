@@ -1,0 +1,16 @@
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.8125rem 22%;
+    border-bottom: 0.0625rem solid var(--grey-3);
+}
+
+@media(max-width: 46.875rem){
+    .header__container{
+        padding: 1.625rem 0.8125rem 2rem 0.8125rem;
+        &> button{
+            width: 1.875rem;
+        }
+    }
+
+}

@@ -1,0 +1,42 @@
+.section__container{
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+}
+
+.div__user{
+    display: flex;
+    justify-content: space-between;
+    padding: 45px 22%;
+    border-bottom: 1px solid var(--grey-3);
+
+    & > h1{
+        color: var(--grey-0);
+    }
+    & > p{
+        color: var(--grey-1);
+    }
+}
+
+.div__content{
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    padding: 0 22%;
+
+    & > h2, & > p{
+        color: var(--grey-0);
+    }
+}
+
+@media(max-width: 750px){
+    .div__user{
+        flex-direction: column;
+        padding: 34px 12px;
+        gap: 10px;
+    }
+
+    .div__content{
+        padding: 24px 12px;
+    }
+}

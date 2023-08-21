@@ -1,0 +1,92 @@
+.section{
+    background-color: var(--grey-4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 77px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--grey-3);
+    padding: 42px 22px;
+    gap: 22px;
+    border-radius: 3.2px;
+
+    & > h1{
+        text-align: center;
+        color: var(--grey-0);
+    }
+}
+
+.div__input{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    & > label{
+        color: var(--grey-0);
+    }
+
+    & > p{
+        color: var(--grey-1);
+    }
+}
+
+.div__register{
+    padding-top: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    &>p{
+        color: var(--grey-1);
+    }
+}
+
+.div__inputPassword{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: var(--grey-0);
+
+    & > p{
+        color: var(--grey-1);
+    }
+
+    & > div{
+        position: relative;
+
+        & > input{
+            width: 90%;
+        }
+
+        & > button{
+            position: absolute;
+            top: 2.5rem;
+            right: 22px;
+            background-color: transparent;
+            border: none;
+            color: var(--grey-1);
+        }
+    }
+}
+
+@media(max-width: 390px){
+    .form{
+        padding: 33px 17px;
+        gap: 10px;
+        width: 85%;
+
+        & > button{
+            width: 100%;
+        }
+    }
+
+    .div__register{
+        button{
+            width: 100%;
+        }
+    }
+}

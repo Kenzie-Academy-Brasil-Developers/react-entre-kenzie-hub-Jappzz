@@ -1,0 +1,31 @@
+.title{
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Inter";
+    line-height: 28.5008px;
+    
+    &.two{
+        font-size: 16px;
+        font-weight: 600;
+        font-family: "Inter";
+        line-height: 26.4px;
+
+    }
+}
+.headline{
+    font-family: "Inter";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22px;
+    &.bold{
+        font-weight: 600;
+        line-height: 18px;
+    }
+}
+.paragraph{
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+
+}

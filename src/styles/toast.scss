@@ -1,0 +1,26 @@
+.toast__sucess{
+    background-color: var(--grey-2);
+    color: var(--grey-0);
+    .custom-toast-progress{
+        background-color: var(--sucess);
+    }
+    .Toastify__toast-icon{
+        & > svg{
+            fill: var(--sucess);
+        }
+    }
+    
+}
+
+.toast__error{
+    background-color: var(--grey-2);
+    color: var(--grey-0);
+    .custom-toast-progress{
+        background-color: var(--negative);
+    }
+    .Toastify__toast-icon{
+        & > svg{
+            fill: var(--negative);
+        }
+    }
+}
