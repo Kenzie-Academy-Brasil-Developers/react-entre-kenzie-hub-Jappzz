@@ -1,11 +1,15 @@
+import { useContext } from "react"
 import styles from "../SectionUser/style.module.scss"
-export const SectionUser = ({ user }) => {
+import { UserContext } from "../../../providers/UserCointext"
+export const SectionUser = () => {
+
+    const {user} = useContext(UserContext)
     return (
 
         <section className={styles.section__container}>
             <div className={styles.div__user}>
                 <h1 className="title">
-                    Olá, {user.name}
+                    Olá, {user?.name}
                 </h1>
                 <p className="headline">
                     {user?.course_module}

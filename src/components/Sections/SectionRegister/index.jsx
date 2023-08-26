@@ -2,13 +2,12 @@ import styles from "../SectionRegister/style.module.scss"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { registerFormSchema } from "./registerFormSchema.js"
-import { api } from "../../../services/api"
 import { useState } from "react"
 import { Input } from "../../Inputs"
-
-import { toast } from "react-toastify"
 import "../../../styles/toast.scss"
 import { Options } from "../../SelectOption"
+import { useContext } from "react"
+import { UserContext } from "../../../providers/UserCointext"
 export const SectionRegister = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm({
@@ -17,27 +16,10 @@ export const SectionRegister = () => {
 
     const [loading, setLoading] = useState(false)
 
-    console.log(loading)
-
-
-    const userRegister = async (formData) => {
-        try {
-            setLoading(true)
-            await api.post("/users", formData)
-            toast.success("Conta criada com sucesso!", {
-                className:"toast__sucess"
-            })
-        } catch (error) {
-            toast.error("Ops! Algo deu errado", {
-                className:"toast__error"
-            })
-        } finally {
-            setLoading(false)
-        }
-    }
+    const {userRegister} = useContext(UserContext)
 
     const submit = (formData) => {
-        userRegister(formData)
+        userRegister(formData, setLoading)
     }
 
     return (

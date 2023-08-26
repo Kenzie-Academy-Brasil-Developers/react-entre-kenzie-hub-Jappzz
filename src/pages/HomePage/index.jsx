@@ -1,13 +1,12 @@
-import { set } from "react-hook-form"
 import { HeaderUser } from "../../components/Headers/HeaderUser"
 import { SectionUser } from "../../components/Sections/SectionUser"
 
-export const HomePage = ({user, setUser})=>{
+export const HomePage = ()=>{
     return(
         <>
-            <HeaderUser setUser={setUser}/>
+            <HeaderUser />
             <main>
-                <SectionUser user={user} />
+                <SectionUser />
             </main>
         </>
     )

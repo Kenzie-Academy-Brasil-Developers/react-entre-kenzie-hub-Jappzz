@@ -1,54 +1,31 @@
 import styles from "../SectionLogin/style.module.scss"
-import { Form, Link, useNavigate } from "react-router-dom"
+import { Link,} from "react-router-dom"
 import { useForm } from "react-hook-form"
 import { useState } from "react"
 import { MdVisibility, MdVisibilityOff } from "react-icons/md"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { loginFormSchema } from "./loginFormSchema.js"
-import { api } from "../../../services/api.js"
 import { Input } from "../../Inputs"
-import {toast} from "react-toastify"
 import "../../../styles/toast.scss"
+import { useContext } from "react"
+import { UserContext } from "../../../providers/UserCointext"
 
 
-export const SectionLogin = ({ setUser }) => {
+export const SectionLogin = () => {
 
-    const { register, handleSubmit, formState: { errors } } = useForm({
+    const { register, handleSubmit, formState: { errors }, reset } = useForm({
         resolver: zodResolver(loginFormSchema)
     })
-
-    const navigate = useNavigate()
 
     const [isHidden, setIsHidden] = useState(true)
 
     const [loading, setLoading] = useState(false)
 
-    const userLogin = async (formData) => {
-        try {
-            setLoading(true)
-            const { data } = await api.post("/sessions", formData)
-            console.log(data.user)
-            setUser(data.user)
-            localStorage.setItem("@TOKEN", data.token)
-            toast.success("Login realizado", {
-                className: "toast__success"
-            })
-            
-            setTimeout(() => {
-                navigate("/dashboard")
-            }, 3000)
-        } catch (error) {
-            toast.error("Email ou senha inválidos", {
-                className: "toast__error"
-            })
-        } finally {
-            setLoading(false)
-        }
-    }
+    const {userLogin} = useContext(UserContext)
     
 
     const submit = (formData) => {
-        userLogin(formData)
+        userLogin(formData, setLoading, reset)
     }
     return (
         <section className={styles.section}>

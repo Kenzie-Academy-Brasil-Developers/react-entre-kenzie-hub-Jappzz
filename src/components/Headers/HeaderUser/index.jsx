@@ -1,14 +1,12 @@
-import { useNavigate } from "react-router-dom"
+import { useContext } from "react"
 import LogoKenzieHub from "../../../assets/logo-KenzieHub.svg"
 import styles from "../HeaderUser/style.module.scss"
-export const HeaderUser = ({setUser})=>{
-    const navigate = useNavigate()
+import { UserContext } from "../../../providers/UserCointext"
 
-    const userLogout = ()=>{
-        setUser(null)
-        navigate("/")
-        localStorage.removeItem("@TOKEN")
-    }
+export const HeaderUser = ()=>{
+
+    const {userLogout} = useContext(UserContext)
+    
     return(
         <header className={styles.header__container}>
             <img src={LogoKenzieHub} alt="logo KenzieHub" />
