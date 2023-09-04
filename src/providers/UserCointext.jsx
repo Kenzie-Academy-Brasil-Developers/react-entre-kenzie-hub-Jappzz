@@ -76,9 +76,14 @@ export const UserProvider = ({children}) =>{
                 navigate("/")
             }, 3000)
         } catch (error) {
-            toast.error("Ops! Algo deu errado", {
-                className:"toast__error"
-            })
+            console.log(error)
+            if(error.response.data.message == "Email already exists"){
+                toast.error("Este email já existe")
+            }else{
+                toast.error("Ops! Algo deu errado", {
+                    className:"toast__error"
+                })
+            }
         } finally {
             setLoading(false)
         }
@@ -94,4 +99,5 @@ export const UserProvider = ({children}) =>{
             {children}
         </UserContext.Provider>    
     )
+
 }

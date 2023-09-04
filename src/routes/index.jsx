@@ -4,22 +4,26 @@ import { RegisterPage } from "../pages/RegisterPage"
 import { LoginPage } from "../pages/LoginPage"
 import { PrivateRoute } from "./PrivateRoutes"
 import { PublicRoutes } from "./PublicRoutes"
+import { TechnologiesProvider } from "../providers/UserTechnologies"
 export const RoutesMain = () => {
 
     return (
         <Routes>
 
-            <Route element={<PublicRoutes/>}>
+            <Route element={<PublicRoutes />}>
                 <Route path="/"
                     element={<LoginPage />} />
                 <Route path="/register"
                     element={<RegisterPage />} />
             </Route>
-            
+
             <Route element={<PrivateRoute />}>
                 <Route
                     path="/dashboard"
-                    element={<HomePage />} />
+                    element={
+                        <TechnologiesProvider>
+                            <HomePage /> 
+                        </TechnologiesProvider>} />
             </Route>
 
 

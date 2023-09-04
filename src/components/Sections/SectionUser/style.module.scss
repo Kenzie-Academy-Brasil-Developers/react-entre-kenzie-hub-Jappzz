@@ -20,13 +20,20 @@
 
 .div__content{
     display: flex;
-    flex-direction: column;
-    gap: 1.4375rem;
+    justify-content: space-between;
     padding: 0 22%;
 
-    & > h2, & > p{
+    & > h2{
         color: var(--grey-0);
     }
+    & > button{
+        border: none;
+        background-color: transparent;
+    }
+}
+
+.div__list{
+    padding: 0 22% 0 22%
 }
 
 @media(max-width: 46.875rem){
